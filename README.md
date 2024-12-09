@@ -32,4 +32,11 @@ items:
     unbreakable: true # Make the item unbreakable
 ```
 
+It's also possible to get an ItemProvider from an ItemsAdder's custom item, this requires ItemsAdder to be installed on the server:
+```java
+ItemStack myItemsAdderItem = ItemCreator.ofItemsAdder("my-namespace:my-item-id") // Get the ItemsAdder item at the given namespace id as an ItemProvider
+                                        .build() // Build the ItemProvider
+                                        .itemstack(); // Convert it to ItemStack
+```
+
 An improved documentation will come soon...
