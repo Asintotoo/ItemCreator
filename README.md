@@ -54,7 +54,7 @@ ItemStack myItemFromConfig = ItemCreator.of(plugin.getConfig(), "items.king-swor
                                         .build()
                                         .itemstack();
 ```
-Here is the  example of the YamlConfiguration format unsed above:
+Here is the  example of the YamlConfiguration format used above:
 ```yaml
 items:
   king-sword:
