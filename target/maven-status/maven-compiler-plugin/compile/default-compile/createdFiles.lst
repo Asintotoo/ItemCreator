@@ -1,7 +1,0 @@
-com\asintoto\itemcreator\items\providers\ItemProvider.class
-com\asintoto\itemcreator\utils\ItemsAdderHook.class
-com\asintoto\itemcreator\utils\StringFormatter.class
-com\asintoto\itemcreator\items\providers\SkullProvider.class
-com\asintoto\itemcreator\ItemCreator.class
-com\asintoto\itemcreator\items\serializers\ItemSerializer.class
-com\asintoto\itemcreator\items\RawItem.class
