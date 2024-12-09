@@ -4,6 +4,41 @@ Items Creation Library for Minecraft Plugins
 
 **Note**: This library requires PaperMC server software in order to work. Make sure that your plugin uses the papermc-api instead of the usual (and obsulate) spigot-api
 
+
+## How to get the library
+You can include this library in your project by declaring the following dependency:
+
+Maven:
+```xml
+<repositories>
+  <repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+  </repository>
+</repositories>
+
+<dependencies>
+  <dependency>
+    <groupId>com.github.Asintotoo</groupId>
+    <artifactId>ItemCreator</artifactId>
+    <version>VERSION</version>
+  </dependency>
+</dependencies>
+```
+
+Gradle:
+```groovy
+repositories {
+  mavenCentral()
+  maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+  implementation 'com.github.Asintotoo:ItemCreator:VERSION'
+}
+```
+Replace VERSION with the latest version avaiable that can be found [here](https://github.com/Asintotoo/ItemCreator/releases/latest)
+
 ## How to use
 You can either create an Item from scratch or describe it in a .yml file as following:
 ```java
