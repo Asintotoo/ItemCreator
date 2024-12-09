@@ -13,6 +13,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.OfflinePlayer;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
@@ -104,6 +105,10 @@ public class ItemCreator implements Cloneable{
 
     public static ItemProvider ofItemsAdder(String namespace_id) {
         return new ItemProvider(ItemsAdderHook.getItemsAdderItemStack(namespace_id));
+    }
+
+    public static <T extends ItemSerializer<T>> ItemSerializer<T> of(final FileConfiguration config, final String path) {
+        return of((YamlConfiguration) config, path);
     }
 
     @SuppressWarnings("unchecked")
