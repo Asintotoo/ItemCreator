@@ -1,10 +1,11 @@
 package com.asintoto.itemcreator;
 
+import com.asintoto.itemcreator.hooks.OraxenHook;
 import com.asintoto.itemcreator.items.RawItem;
 import com.asintoto.itemcreator.items.providers.ItemProvider;
 import com.asintoto.itemcreator.items.providers.SkullProvider;
 import com.asintoto.itemcreator.items.serializers.ItemSerializer;
-import com.asintoto.itemcreator.utils.ItemsAdderHook;
+import com.asintoto.itemcreator.hooks.ItemsAdderHook;
 import com.destroystokyo.paper.profile.PlayerProfile;
 import com.destroystokyo.paper.profile.ProfileProperty;
 import lombok.AllArgsConstructor;
@@ -105,6 +106,10 @@ public class ItemCreator implements Cloneable{
 
     public static ItemProvider ofItemsAdder(String namespace_id) {
         return new ItemProvider(ItemsAdderHook.getItemsAdderItemStack(namespace_id));
+    }
+
+    public static ItemProvider ofOraxen(String namespace_id) {
+        return new ItemProvider(OraxenHook.getOraxenItemStack(namespace_id));
     }
 
     public static <T extends ItemSerializer<T>> ItemSerializer<T> of(final FileConfiguration config, final String path) {
