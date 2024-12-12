@@ -123,6 +123,11 @@ public class ItemCreator implements Cloneable{
             return (T) new ItemProvider(ItemsAdderHook.getItemsAdderItemStack(itemsadderID.get()));
         }
 
+        final Optional<String> oraxenID = Optional.ofNullable(config.getString(path + ".oraxen"));
+        if(oraxenID.isPresent()) {
+            return (T) new ItemProvider(OraxenHook.getOraxenItemStack(oraxenID.get()));
+        }
+
         final String material = config.getString(path + ".material");
         final String texture = config.getString(path + ".texture");
         final String owner = config.getString(path + ".owner");

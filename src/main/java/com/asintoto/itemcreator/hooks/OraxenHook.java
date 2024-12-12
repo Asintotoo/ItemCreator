@@ -11,7 +11,7 @@ public class OraxenHook {
     }
 
     public static ItemStack getOraxenItemStack(String namespace_id) {
-        if(!PluginChecker.pluginExists("Oraxen")) {
+        if(!checkOraxen()) {
             return new ItemStack(Material.STONE);
         }
 
